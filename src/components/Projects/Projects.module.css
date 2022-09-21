@@ -1,0 +1,149 @@
+.box {
+  margin: 15px;
+  margin-top: 40px;
+}
+.Project {
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.br {
+  margin-top: 20px;
+}
+
+.head {
+  display: inline-block;
+  padding: 0px 12px;
+  color: rgb(85, 85, 85);
+  margin-bottom: 20px;
+  margin-left: 30px;
+  letter-spacing: 5px;
+  font-size: 11px;
+}
+.container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+
+.image_box {
+  position: relative;
+  flex: 1 1 20%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 15px;
+  max-width: calc(25% - 10px);
+}
+.image_box::after {
+  content: "";
+  background: linear-gradient(180deg, #ffd700, #000);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 0;
+}
+.image_box::after:hover {
+  opacity: 0.85;
+}
+.portfolio_image {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  padding: 10px 20px;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 1));
+  bottom: -70px;
+}
+.content:hover {
+  bottom: 0;
+  background: #00000087;
+}
+.title {
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.description {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #fff;
+  font-weight: 700;
+}
+.btn {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding: 0 23px;
+  height: 40px;
+  line-height: 34px;
+  border: 2px solid #7fc8ff;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #fff;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  background-color: #7fc8ff;
+  color: #343a40;
+}
+
+@media (max-width: 999px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .image_box {
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    justify-self: center;
+    /* margin: auto; */
+    width: 400px;
+  }
+}
+@media (max-width: 500px) {
+  .image_box {
+    max-width: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .image_box {
+    max-width: 250px;
+  }
+}
+
+@keyframes text {
+  from {
+    transform: translateX(-30px);
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 992px) {
+  .box {
+    text-align: center;
+  }
+}
