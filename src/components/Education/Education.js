@@ -97,8 +97,8 @@ class Education extends Component {
                           </h2>
                           <p>
                             I have completed my higher education from ASU with
-                            major subjects as Physics,Chemistry,ThermoDynamics &
-                            Maths with 85% merit in CBSE board.{" "}
+                            major subjects as Physics,ThermoDynamics & Maths
+                            with 85% merit in CBSE board.{" "}
                           </p>
                         </div>
                       </article>
