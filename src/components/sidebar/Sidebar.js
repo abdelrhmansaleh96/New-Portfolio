@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./Sidebar.css";
 import { HashLink as Link } from "react-router-hash-link";
-import { FiExternalLink } from "react-icons/fi";
 import logo from "../images/sam.jpg";
 
 class Sidebar extends Component {
